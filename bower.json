@@ -5,6 +5,7 @@
     "ionic": "driftyco/ionic-bower#1.0.0-rc.2"
   },
   "dependencies": {
-    "d3": "~3.5.5"
+    "d3": "~3.5.5",
+    "ionicons": "~2.0.1"
   }
 }
