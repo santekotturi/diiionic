@@ -54,4 +54,45 @@ angular.module('starter.directives', [])
     // ,
     // templateUrl: 'templates/planet-revolve.html'
   }
-});
+})
+
+.directive('scalableBox', function(){
+  function link(scope, el, attr){
+    el = el[0];
+    
+    var width = scope.svgSize + '%',  
+        height = 300;
+    var svg = d3.select(el).append('svg')
+          .attr({width: width, height: height})
+          .style({
+            border:'solid'
+          });
+
+    var rect = svg.append('rect')
+                  .attr({
+                    width: scope.rectSize + '%', 
+                    height:height
+                  })
+                  .style({
+                    fill:'black'
+                  });
+
+    scope.$watch('svgSize', function(newVal){
+      if(!newVal) return; 
+      svg.attr({width:newVal + '%'})
+    }, true);
+
+   scope.$watch('rectSize', function(newVal){
+      if(!newVal) return; 
+      rect.attr({width:newVal + '%'})
+    }, true);
+
+  }
+  return {
+    link: link, 
+    restrict: 'E'
+  }
+
+})
+
+;

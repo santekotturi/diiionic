@@ -1,16 +1,17 @@
-<ion-view view-title="Chats">
+<ion-view view-title="Scaled">
   <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
-
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
+    <scalable-box></scalable-box>
+    <div class="list">
+      <div class="item range range-positive">
+        <i class="icon ion-ios7-sunny-outline"></i>
+        <input type="range" name="volume" min="0" max="100" ng-model="svgSize">
+        <i class="icon ion-ios7-sunny"></i>
+      </div>
+      <div class="item range range-positive">
+        <i class="icon ion-ios7-sunny-outline"></i>
+        <input type="range" name="volume" min="0" max="100" ng-model="rectSize">
+        <i class="icon ion-ios7-sunny"></i>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

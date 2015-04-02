@@ -19,11 +19,9 @@ angular.module('starter.controllers', [])
 		}, 100);
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  }
+.controller('ChatsCtrl', function($scope) {
+  $scope.svgSize = 100;
+  $scope.rectSize = 75;
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
