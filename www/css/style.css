@@ -1,7 +1,17 @@
 .full-width {
-	width: 100vw;
+    width: 100vw;
 }
 
 .half-height {
-	height: 50vh;
+    height: 50vh;
+}
+
+div.histStyle {
+    display: inline-block;
+    width: 3px;
+    height: 75px;
+    margin-right: 1px;
+    margin-left: 1px; 
+    margin-top: 5px; 
+    background-color: #3B78F8;
 }

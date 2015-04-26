@@ -48,6 +48,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
+    .state('tab.histogram', {
+    url: '/histogram',
+    views: {
+      'tab-histogram': {
+        templateUrl: 'templates/tab-histogram.html',
+        controller: 'HistogramCtrl'
+      }
+    }
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {
